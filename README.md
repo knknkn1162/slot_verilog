@@ -24,8 +24,8 @@ git push -u origin master
 |---|---|---|---|
 |input|`i_`||
 |output|`o_`||
-|wire|`w_`||
-|reg|`r_`||
+|wire|`s_`||
+|reg|`s_`||
 |n-clk delay||`_$n`|
 |block in marco||`_block`|NOT semicolon|
 
