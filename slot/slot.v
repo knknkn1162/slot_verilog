@@ -13,7 +13,7 @@ module slot #(
   output wire [6:0] o_hex0
 );
 
-  parameter EN_BTN_CYCLE = 21;
+  localparam EN_BTN_CYCLE = 21;
 
   wire s_7seg_en, s_btn_en, s_counter_en;
   wire s_sw;
