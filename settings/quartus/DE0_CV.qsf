@@ -1,20 +1,9 @@
 # See https://www.intel.com/content/www/us/en/programmable/support/training/university/boards.html or directly ftp://ftp.intel.com/Pub/fpgaup/pub/Intel_Material/Boards/DE0-CV/DE0_CV.qsf
 #============================================================
-# Altera DE0-CV board settings
-#============================================================
-set_global_assignment -name FAMILY "Cyclone V"
-set_global_assignment -name DEVICE 5CEBA4F23C7
-set_global_assignment -name TOP_LEVEL_ENTITY "DE0_CV"
-set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
-set_global_assignment -name DEVICE_FILTER_PIN_COUNT 484
-set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 7
-set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
-
-#============================================================
 # CLOCK
 #============================================================
-set_location_assignment PIN_M9 -to CLOCK_50
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK_50
+set_location_assignment PIN_M9 -to clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk
 
 #============================================================
 # CLOCK2
@@ -502,12 +491,9 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_VS
 #============================================================
 # End of pin and io_standard assignments
 #============================================================
-
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name SDC_FILE settings/quartus/DE0_CV.sdc
 
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to VGA_*
-
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SEARCH_PATH macro
+set_global_assignment -name SEARCH_PATH general
+set_global_assignment -name SEARCH_PATH display
+set_global_assignment -name SEARCH_PATH component
