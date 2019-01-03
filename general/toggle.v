@@ -1,7 +1,9 @@
 `ifndef _toggle
 `define _toggle
 
-module toggle (
+module toggle #(
+  parameter INIT = 1'b1
+)(
   input wire clk, i_sclr, i_en,
   output wire o_sw
 );
@@ -10,7 +12,7 @@ module toggle (
 
   always @(posedge clk) begin
     if (i_sclr) begin
-      r_sw <= 1'b0;
+      r_sw <= INIT;
     end else if (i_en) begin
       r_sw <= ~r_sw;
     end

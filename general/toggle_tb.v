@@ -4,9 +4,10 @@
 module toggle_tb;
   reg clk, i_sclr, i_en;
   wire o_sw;
+  parameter INIT = 1'b0;
 
   parameter CLK_PERIOD = 10;
-  toggle uut(
+  toggle #(INIT) uut(
     .clk(clk),
     .i_sclr(i_sclr),
     .i_en(i_en),
