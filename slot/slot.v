@@ -9,6 +9,7 @@ module slot #(
   parameter EN_CYCLE = 26
 )(
   input wire clk, i_sclr, i_btn_n,
+  output wire o_ledr0,
   output wire [6:0] o_hex0
 );
 
@@ -41,6 +42,8 @@ module slot #(
     .i_en(s_btn_posedge),
     .o_sw(s_sw)
   );
+
+  assign o_ledr0 = s_sw;
 
   // generate approx. 1 Hz
   enable_gen #(EN_CYCLE) enable_gen_counter(

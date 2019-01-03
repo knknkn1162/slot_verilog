@@ -382,7 +382,7 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FPGA_RESET_N
 #============================================================
 # LEDR
 #============================================================
-set_location_assignment PIN_AA2 -to LEDR[0]
+set_location_assignment PIN_AA2 -to o_ledr0
 set_location_assignment PIN_AA1 -to LEDR[1]
 set_location_assignment PIN_W2 -to LEDR[2]
 set_location_assignment PIN_Y3 -to LEDR[3]
@@ -392,7 +392,7 @@ set_location_assignment PIN_U2 -to LEDR[6]
 set_location_assignment PIN_U1 -to LEDR[7]
 set_location_assignment PIN_L2 -to LEDR[8]
 set_location_assignment PIN_L1 -to LEDR[9]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to o_ledr0
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[2]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[3]
