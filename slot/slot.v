@@ -50,6 +50,8 @@ module slot #(
     .clk(clk), .i_sclr(i_sclr), .o_en(s_7seg_en)
   );
   assign s_counter_en = s_7seg_en & s_sw;
+  // you can count-up each time you push the button
+  // assign s_counter_en = s_btn_posedge;
 
   counter10_en counter10_en0(
     .clk(clk), .i_sclr(i_sclr), .i_en(s_counter_en),
