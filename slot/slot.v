@@ -4,7 +4,7 @@
 
 
 module slot #(
-  parameter EN_CYCLE = 22
+  parameter EN_CYCLE = 26
 )(
   input wire clk, i_sclr,
   output wire [6:0] o_hex0
