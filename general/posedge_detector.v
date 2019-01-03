@@ -3,7 +3,7 @@
 
 module posedge_detector (
   input wire clk, i_sclr, i_en, i_dat,
-  output wire o_en_rise
+  output wire o_posedge
 );
 
   reg [2:0] r_en;
@@ -16,7 +16,7 @@ module posedge_detector (
     end
   end
 
-  assign o_en_rise = (r_en[2:1] == 2'b01) & i_en;
+  assign o_posedge = (r_en[2:1] == 2'b01) & i_en;
 endmodule
 
 `endif
