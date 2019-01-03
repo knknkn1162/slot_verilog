@@ -364,11 +364,11 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[6]
 #============================================================
 # KEY
 #============================================================
-set_location_assignment PIN_U7 -to KEY[0]
+set_location_assignment PIN_U7 -to i_btn_n
 set_location_assignment PIN_W9 -to KEY[1]
 set_location_assignment PIN_M7 -to KEY[2]
 set_location_assignment PIN_M6 -to KEY[3]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to i_btn_n
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[2]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[3]
